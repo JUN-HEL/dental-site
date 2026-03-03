@@ -81,3 +81,12 @@ section {
   opacity: 1;
   transform: translateY(0);
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* IMPORTANT: prevents section headings going under fixed navbar */
+section {
+  scroll-margin-top: 90px;
+}
