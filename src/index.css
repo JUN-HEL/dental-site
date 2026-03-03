@@ -1,0 +1,83 @@
+@tailwind utilities;
+@import "tailwindcss";
+/* ================= GLOBAL RESET ================= */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-white text-gray-800 antialiased;
+  font-family: 'Inter', sans-serif;
+}
+
+/* ================= CONTAINER SPACING ================= */
+
+section {
+  @apply relative overflow-hidden;
+}
+
+/* ================= BUTTON ENHANCEMENTS ================= */
+
+.btn-primary {
+  @apply bg-teal-600 text-white px-6 py-3 rounded-xl shadow-lg transition duration-300 ease-in-out;
+}
+
+.btn-primary:hover {
+  @apply bg-teal-700 shadow-xl scale-105;
+}
+
+.btn-outline {
+  @apply border border-teal-600 text-teal-600 px-6 py-3 rounded-xl transition duration-300;
+}
+
+.btn-outline:hover {
+  @apply bg-teal-50 scale-105;
+}
+
+/* ================= GLASS EFFECT ================= */
+
+.glass {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* ================= CARD HOVER EFFECT ================= */
+
+.card-hover {
+  @apply transition duration-500 ease-in-out;
+}
+
+.card-hover:hover {
+  transform: translateY(-8px);
+}
+
+/* ================= SOFT GRADIENT BACKGROUND ================= */
+
+.gradient-bg {
+  background: linear-gradient(135deg,
+      rgba(20, 184, 166, 0.1),
+      rgba(255, 255, 255, 1));
+}
+
+/* ================= PREMIUM SHADOW ================= */
+
+.shadow-soft {
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* ================= SCROLL ANIMATION (OPTIONAL) ================= */
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.fade-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
