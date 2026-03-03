@@ -6,7 +6,7 @@ export default function Hero() {
     const navigate = useNavigate();
 
     return (
-        <section id="home" className="relative pt-28 lg:pt-32 overflow-hidden">
+        <section id="home" className="relative overflow-hidden">
             {/* Background */}
             <div className="absolute inset-0 bg-gradient-to-br from-teal-50 via-white to-white" />
             <div className="absolute -top-24 -right-24 w-80 h-80 bg-teal-200/30 rounded-full blur-3xl" />
