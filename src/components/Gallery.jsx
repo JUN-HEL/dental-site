@@ -2,12 +2,13 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const images = [
-    "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=1400&q=80",
-    "https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=1400&q=80",
-    "https://images.unsplash.com/photo-1585417233727-7c3b1103a1e3?auto=format&fit=crop&w=1400&q=80",
-    "https://images.unsplash.com/photo-1598257006463-7c64a26b83d8?auto=format&fit=crop&w=1400&q=80",
-    "https://images.unsplash.com/photo-1609840114035-3c981b782f19?auto=format&fit=crop&w=1400&q=80",
-    "https://images.unsplash.com/photo-1588776813677-77c6c4f4b7a2?auto=format&fit=crop&w=1400&q=80",
+    "images/d5.png",
+    "images/d1.png",
+    "images/d3.png",
+    "images/d4.png",
+    "images/d2.png",
+    "images/d6.png",
+
 ];
 
 export default function Gallery() {

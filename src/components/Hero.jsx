@@ -1,111 +1,316 @@
 import { motion } from "framer-motion";
-import { ShieldCheck, Sparkles, CalendarCheck } from "lucide-react";
+import {
+    CalendarCheck,
+    ShieldCheck,
+    Sparkles,
+    Star,
+} from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 export default function Hero() {
     const navigate = useNavigate();
 
+    const stats = [
+        {
+            value: "10+",
+            label: "Years Experience",
+        },
+        {
+            value: "5000+",
+            label: "Happy Patients",
+        },
+        {
+            value: "4.9★",
+            label: "Average Rating",
+        },
+    ];
+
     return (
-        <section id="home" className="relative overflow-hidden">
-            {/* Background */}
-            <div className="absolute inset-0 bg-gradient-to-br from-teal-50 via-white to-white" />
-            <div className="absolute -top-24 -right-24 w-80 h-80 bg-teal-200/30 rounded-full blur-3xl" />
-            <div className="absolute -bottom-24 -left-24 w-80 h-80 bg-teal-100/60 rounded-full blur-3xl" />
+        <section className="relative overflow-hidden bg-gradient-to-b from-white via-white to-teal-50/40">
 
-            <div className="relative max-w-7xl mx-auto px-6 py-14 lg:py-20 grid lg:grid-cols-2 gap-12 items-center">
-                {/* Left */}
-                <motion.div
-                    initial={{ opacity: 0, y: 24 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6 }}
-                >
-                    <p className="inline-flex items-center gap-2 rounded-full bg-white/80 border border-gray-100 px-4 py-2 text-sm font-semibold text-gray-700 shadow-sm">
-                        <Sparkles size={16} className="text-teal-700" />
-                        Modern Dentistry • Gentle Care
-                    </p>
+            {/* Background glow */}
+            <div className="absolute -top-32 -left-32 h-80 w-80 rounded-full bg-teal-100/50 blur-3xl" />
+            <div className="absolute right-0 bottom-0 h-96 w-96 rounded-full bg-cyan-100/40 blur-3xl" />
 
-                    <h1 className="mt-6 text-4xl md:text-6xl font-extrabold tracking-tight text-gray-900 leading-tight">
-                        Confident Smiles{" "}
-                        <span className="text-teal-700">Begin Here</span>
-                    </h1>
 
-                    <p className="mt-6 text-lg text-gray-600 max-w-xl leading-relaxed">
-                        Advanced dental care with modern technology and a gentle approach.
-                        Trusted by thousands of happy patients.
-                    </p>
+            <div className="relative mx-auto max-w-7xl px-6 py-16 lg:py-28">
 
-                    <div className="mt-8 flex flex-col sm:flex-row gap-4">
-                        <button
-                            onClick={() => navigate("/book")}
-                            className="rounded-2xl bg-teal-600 text-white px-6 py-4 font-semibold shadow-lg hover:bg-teal-700 transition inline-flex items-center justify-center gap-2"
-                        >
-                            <CalendarCheck size={18} />
-                            Book Appointment
-                        </button>
 
-                        <button
-                            onClick={() => navigate("/services")}
-                            className="rounded-2xl border border-gray-200 bg-white px-6 py-4 font-semibold text-gray-800 hover:bg-gray-50 transition"
-                        >
-                            View Treatments
-                        </button>
-                    </div>
+                {/* MAIN HERO */}
+                <div className="grid items-center gap-14 lg:grid-cols-2">
 
-                    <div className="mt-10 grid sm:grid-cols-3 gap-4 max-w-xl">
-                        <div className="rounded-2xl bg-white/70 border border-gray-100 p-5 shadow-sm">
-                            <p className="text-sm text-gray-500">Experience</p>
-                            <p className="text-2xl font-bold mt-1">10+ yrs</p>
-                        </div>
-                        <div className="rounded-2xl bg-white/70 border border-gray-100 p-5 shadow-sm">
-                            <p className="text-sm text-gray-500">Patients</p>
-                            <p className="text-2xl font-bold mt-1">5000+</p>
-                        </div>
-                        <div className="rounded-2xl bg-white/70 border border-gray-100 p-5 shadow-sm">
-                            <p className="text-sm text-gray-500">Safety</p>
-                            <p className="text-2xl font-bold mt-1 inline-flex items-center gap-2">
-                                <ShieldCheck size={18} className="text-teal-700" />
-                                Sterile
-                            </p>
-                        </div>
-                    </div>
-                </motion.div>
 
-                {/* Right image */}
-                <motion.div
-                    initial={{ opacity: 0, y: 24 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.05 }}
-                    className="relative"
-                >
-                    <div className="rounded-[2rem] bg-white/70 border border-gray-100 shadow-2xl p-3">
-                        <img
-                            src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=1600&q=80"
-                            alt="Dental Clinic"
-                            className="rounded-[1.7rem] w-full h-[420px] object-cover"
-                            loading="lazy"
-                        />
-                    </div>
-
-                    {/* Floating highlight card */}
+                    {/* CONTENT */}
                     <motion.div
-                        initial={{ opacity: 0, y: 12 }}
+                        initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.25, duration: 0.5 }}
-                        className="absolute -bottom-6 -left-6 hidden sm:block rounded-3xl bg-white/85 border border-gray-100 shadow-xl p-5"
+                        transition={{ duration: .7 }}
                     >
-                        <p className="text-sm text-gray-500">Today’s Highlight</p>
-                        <p className="text-lg font-bold text-gray-900 mt-1">Laser Whitening</p>
-                        <p className="text-sm text-gray-600 mt-1">Bright smile in one session</p>
 
-                        <button
-                            onClick={() => navigate("/book")}
-                            className="mt-4 w-full rounded-2xl bg-teal-600 text-white py-3 font-semibold hover:bg-teal-700 transition"
-                        >
-                            Book Whitening
-                        </button>
+                        {/* Badge */}
+                        <div className="inline-flex items-center gap-2 rounded-full border border-teal-100 bg-teal-50 px-4 py-2">
+                            <Sparkles
+                                size={16}
+                                className="text-teal-700"
+                            />
+
+                            <span className="text-sm font-semibold text-teal-700">
+                                Premium Dental Care
+                            </span>
+                        </div>
+
+
+                        {/* Heading */}
+                        <h1 className="mt-7 text-4xl font-black leading-tight text-slate-900 md:text-5xl lg:text-6xl">
+
+                            Your Smile
+                            <br />
+
+                            <span className="text-teal-700">
+                                Deserves The
+                            </span>
+
+                            <br />
+
+                            Best Care
+
+                        </h1>
+
+
+                        {/* Description */}
+                        <p className="mt-6 max-w-xl text-lg leading-8 text-slate-600">
+
+                            Modern dentistry with advanced technology
+                            and gentle care to create confident,
+                            healthy smiles.
+
+                        </p>
+
+
+
+                        {/* Buttons */}
+                        <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+
+                            <button
+                                onClick={() => navigate("/book")}
+                                className="flex items-center justify-center gap-2 rounded-2xl bg-teal-700 px-8 py-4 font-semibold text-white shadow-lg transition hover:bg-teal-800"
+                            >
+
+                                <CalendarCheck size={18} />
+
+                                Book Appointment
+
+                            </button>
+
+
+                            <button
+                                onClick={() => navigate("/services")}
+                                className="rounded-2xl border border-slate-200 bg-white px-8 py-4 font-semibold text-slate-700 transition hover:border-teal-600 hover:text-teal-700"
+                            >
+
+                                View Treatments
+
+                            </button>
+
+                        </div>
+
+
                     </motion.div>
+
+
+
+
+
+                    {/* IMAGE */}
+                    <motion.div
+                        initial={{ opacity: 0, x: 40 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: .8 }}
+                        className="relative flex justify-center"
+                    >
+
+
+                        {/* Glow behind image */}
+                        <div className="absolute h-[420px] w-[420px] rounded-full bg-teal-100 blur-3xl" />
+
+
+
+                        {/* Main Image */}
+                        <div className="relative overflow-hidden rounded-[40px] shadow-[0_40px_90px_rgba(15,23,42,.15)]">
+
+                            <img
+                                src="/images/doctor.png"
+                                alt="Dental clinic"
+                                className="
+                  h-[430px]
+                  w-[320px]
+                  object-cover
+                  sm:w-[380px]
+                  lg:h-[620px]
+                  lg:w-[450px]
+                "
+                            />
+
+                        </div>
+
+
+
+
+                        {/* Rating card */}
+
+                        <div className="
+              absolute
+              left-2
+              top-6
+              rounded-2xl
+              bg-white
+              px-5
+              py-4
+              shadow-xl
+              sm:left-5
+            ">
+
+                            <div className="flex items-center gap-2">
+
+                                <Star
+                                    size={18}
+                                    className="fill-yellow-400 text-yellow-400"
+                                />
+
+                                <span className="font-bold text-slate-900">
+                                    4.9
+                                </span>
+
+                            </div>
+
+
+                            <p className="mt-1 text-sm text-slate-500">
+                                Patient Rating
+                            </p>
+
+
+                        </div>
+
+
+
+
+                        {/* Safety card */}
+
+                        <div className="
+              absolute
+              bottom-5
+              right-2
+              rounded-2xl
+              bg-white
+              px-5
+              py-4
+              shadow-xl
+              sm:right-5
+            ">
+
+
+                            <div className="flex items-center gap-3">
+
+
+                                <div className="rounded-full bg-teal-100 p-2">
+
+                                    <ShieldCheck
+                                        size={20}
+                                        className="text-teal-700"
+                                    />
+
+                                </div>
+
+
+
+                                <div>
+
+                                    <p className="font-semibold text-slate-900">
+                                        Safe & Sterile
+                                    </p>
+
+                                    <p className="text-sm text-slate-500">
+                                        Modern Equipment
+                                    </p>
+
+                                </div>
+
+
+                            </div>
+
+
+                        </div>
+
+
+
+                    </motion.div>
+
+
+                </div>
+
+
+
+
+
+                {/* STATS BELOW IMAGE */}
+                <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: .3 }}
+                    className="
+            mt-16
+            grid
+            grid-cols-2
+            gap-4
+            md:grid-cols-3
+          "
+                >
+
+
+                    {stats.map((item, index) => (
+
+                        <div
+                            key={item.label}
+                            className={`
+                rounded-2xl
+                border
+                border-slate-200
+                bg-white
+                p-5
+                shadow-sm
+                ${index === 2
+                                    ? "col-span-2 md:col-span-1"
+                                    : ""
+                                }
+              `}
+                        >
+
+                            <h3 className="text-3xl font-black text-slate-900">
+
+                                {item.value}
+
+                            </h3>
+
+
+                            <p className="mt-1 text-sm text-slate-500">
+
+                                {item.label}
+
+                            </p>
+
+
+                        </div>
+
+
+                    ))}
+
+
                 </motion.div>
+
+
             </div>
+
+
         </section>
     );
 }

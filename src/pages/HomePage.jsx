@@ -20,9 +20,9 @@ const servicesPreview = [
 ];
 
 const galleryPreview = [
-    "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=1400&q=80",
-    "https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=1400&q=80",
-    "https://images.unsplash.com/photo-1585417233727-7c3b1103a1e3?auto=format&fit=crop&w=1400&q=80",
+    "images/d3.png",
+    "images/d4.png",
+    "images/d5.png",
 ];
 
 const reviewPreview = {
@@ -64,7 +64,7 @@ export default function HomePage() {
 
             {/* SERVICES PREVIEW */}
             <section className="py-20 bg-gradient-to-b from-white to-teal-50">
-                <div className="max-w-7xl mx-auto px-6">
+                <div className="max-w-[1180px] mx-auto px-6">
                     <motion.div
                         initial={{ opacity: 0, y: 16 }}
                         whileInView={{ opacity: 1, y: 0 }}

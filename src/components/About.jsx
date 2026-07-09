@@ -2,6 +2,8 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Award, Users, HeartHandshake, Sparkles } from "lucide-react";
 
+const doctorName = "Kailaish Chandra"
+
 export default function About() {
     return (
         <section id="about" className="relative py-24 overflow-hidden">
@@ -13,31 +15,13 @@ export default function About() {
             <div className="relative max-w-7xl mx-auto px-6">
                 <div className="grid lg:grid-cols-2 gap-12 items-center">
                     {/* Image */}
-                    <motion.div
-                        initial={{ opacity: 0, y: 18 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.6 }}
-                        className="relative"
-                    >
-                        <div className="rounded-[2rem] bg-white/70 border border-gray-100 shadow-2xl p-3">
-                            <img
-                                src="https://images.unsplash.com/photo-1606813909354-6a60b0b8f5e7?auto=format&fit=crop&w=1400&q=80"
-                                alt="Doctor"
-                                className="rounded-[1.7rem] shadow-xl w-full h-[440px] object-cover"
-                                loading="lazy"
-                            />
-                        </div>
-
-                        {/* Floating badge */}
-                        <div className="absolute -bottom-6 left-6 rounded-3xl bg-white/85 backdrop-blur border border-gray-100 shadow-xl px-5 py-4">
-                            <p className="text-sm text-gray-500">Specialty</p>
-                            <p className="font-extrabold text-gray-900 flex items-center gap-2 mt-1">
-                                <Sparkles size={18} className="text-teal-700" />
-                                Cosmetic & Implants
-                            </p>
-                        </div>
-                    </motion.div>
+                    <div className="relative overflow-hidden rounded-[2rem] shadow-[0_30px_70px_rgba(15,118,110,.18)] lg:w-[460px]">
+                        <img
+                            src="/images/doctor.png"
+                            alt="Dentist"
+                            className="h-[420px] w-full object-cover lg:h-[580px]"
+                        />
+                    </div>
 
                     {/* Content */}
                     <motion.div
@@ -51,11 +35,11 @@ export default function About() {
                         </p>
 
                         <h2 className="mt-3 text-3xl md:text-5xl font-extrabold tracking-tight text-gray-900 leading-tight">
-                            Meet <span className="text-teal-700">Dr. Sharma</span>
+                            Meet <span className="text-teal-700">Dr. {doctorName}</span>
                         </h2>
 
                         <p className="mt-6 text-gray-600 text-lg leading-relaxed max-w-xl">
-                            With over 12 years of experience, Dr. Sharma specializes in cosmetic
+                            With over 12 years of experience, Dr. {doctorName} specializes in cosmetic
                             dentistry and dental implants. The mission is simple: make every
                             visit calm, comfortable, and crystal-clear.
                         </p>

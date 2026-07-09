@@ -8,8 +8,8 @@ export default function FloatingContact() {
     const [visible, setVisible] = useState(true);
     const lastScrollY = useRef(0);
 
-    const phoneNumber = "919876543210"; // WhatsApp number (no +)
-    const callNumber = "+919876543210"; // Phone number (with +)
+    const phoneNumber = "+918859861243"; // WhatsApp number (no +)
+    const callNumber = "+918859861243"; // Phone number (with +)
 
     // ---- Working Hours Logic ----
     const isClinicOpen = () => {

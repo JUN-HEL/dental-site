@@ -21,7 +21,7 @@ export default function Contact() {
                                 <Phone className="text-teal-700" />
                                 <div>
                                     <p className="font-bold">Phone</p>
-                                    <p className="text-gray-600">+91 99999 99999</p>
+                                    <p className="text-gray-600">+91 8859861243</p>
                                 </div>
                             </div>
 
@@ -37,7 +37,7 @@ export default function Contact() {
                                 <MapPin className="text-teal-700" />
                                 <div>
                                     <p className="font-bold">Address</p>
-                                    <p className="text-gray-600">Your clinic address here</p>
+                                    <p className="text-gray-600">QCHC+GV5, Kishanpuri, Uttarakhand 246149</p>
                                 </div>
                             </div>
 
@@ -59,9 +59,14 @@ export default function Contact() {
                     </div>
 
                     <div className="rounded-[2rem] overflow-hidden border border-gray-100 shadow-xl bg-gray-50 grid place-items-center">
-                        <p className="text-gray-500 font-medium px-6 text-center">
-                            Add your Google Map embed here (optional)
-                        </p>
+
+                        <iframe
+                            title="Salon Location"
+                            src="https://www.google.com/maps?q=Shri+murari+dental+clinic&output=embed"
+                            className="h-full w-full"
+                            loading="lazy"
+                        />
+
                     </div>
                 </div>
             </div>

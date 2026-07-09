@@ -1,5 +1,5 @@
 export default function FloatingWhatsApp() {
-    const phoneNumber = "919876543210";
+    const phoneNumber = "+918859861243";
     // Replace with dentist number (without +, no spaces)
 
     const message = "Hello Doctor, I would like to book an appointment.";

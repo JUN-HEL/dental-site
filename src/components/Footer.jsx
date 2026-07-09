@@ -1,9 +1,11 @@
 import { NavLink } from "react-router-dom";
 import { PhoneCall, Mail, MapPin, MessageCircle, Instagram, Facebook } from "lucide-react";
+import { address } from "framer-motion/client";
 
 export default function Footer() {
     const year = new Date().getFullYear();
-
+    const clinicName = "Shri Murari Dental Clinic"
+    const address = "QCHC+GV5, Kishanpuri, Uttarakhand 246149"
     const quickLinks = [
         { to: "/", label: "Home" },
         { to: "/about", label: "About" },
@@ -35,7 +37,7 @@ export default function Footer() {
                     {/* Brand */}
                     <div className="md:col-span-1">
                         <p className="text-xl font-extrabold tracking-tight text-gray-900">
-                            Denti<span className="text-teal-700">Care</span>
+                            Shri Murari<span className="text-teal-700"> Dental Clinic</span>
                         </p>
 
                         <p className="mt-4 text-sm text-gray-600 leading-relaxed">
@@ -44,7 +46,7 @@ export default function Footer() {
                         </p>
 
                         <a
-                            href="https://wa.me/919313935657?text=Hi%20%F0%9F%91%8B%20I%20want%20to%20book%20an%20appointment."
+                            href="https://wa.me/918859861243?text=Hi%20%F0%9F%91%8B%20I%20want%20to%20book%20an%20appointment."
                             target="_blank"
                             rel="noreferrer"
                             className="mt-6 inline-flex items-center gap-2 rounded-2xl bg-teal-600 px-5 py-3 text-white font-semibold hover:bg-teal-700 transition"
@@ -134,8 +136,8 @@ export default function Footer() {
                                 <PhoneCall className="text-teal-700 mt-0.5" size={18} />
                                 <div>
                                     <p className="font-semibold text-gray-900">Phone</p>
-                                    <a className="hover:text-teal-700" href="tel:+919999999999">
-                                        +91 99999 99999
+                                    <a className="hover:text-teal-700" href="tel:+918859861243">
+                                        +918859861243
                                     </a>
                                 </div>
                             </div>
@@ -154,7 +156,7 @@ export default function Footer() {
                                 <MapPin className="text-teal-700 mt-0.5" size={18} />
                                 <div>
                                     <p className="font-semibold text-gray-900">Address</p>
-                                    <p>Your clinic address here</p>
+                                    <p>{address} </p>
                                 </div>
                             </div>
 
@@ -171,7 +173,7 @@ export default function Footer() {
                 {/* Bottom bar */}
                 <div className="mt-12 pt-8 border-t border-gray-100 flex flex-col md:flex-row items-center justify-between gap-4">
                     <p className="text-sm text-gray-600">
-                        © {year} DentiCare Clinic. All rights reserved.
+                        © {year} {clinicName}. All rights reserved.
                     </p>
 
                     <div className="flex items-center gap-3 text-sm">

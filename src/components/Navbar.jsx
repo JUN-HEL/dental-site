@@ -13,6 +13,7 @@ const links = [
     { to: "/contact", label: "Contact" },
 ];
 
+const phoneNumber = +918859861243;
 export default function Navbar() {
     const [open, setOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
@@ -65,8 +66,8 @@ export default function Navbar() {
         <header className="fixed top-0 left-0 right-0 z-50">
             {/* Top glass bar */}
             <div
-                className={`transition-all ${scrolled
-                        ? "backdrop-blur-xl bg-white/80 border-b border-gray-100 shadow-[0_12px_40px_rgba(0,0,0,0.06)]"
+                className={`transition-all duration-300 ${scrolled
+                        ? "bg-white/70 backdrop-blur-xl border-b border-white/40 shadow-[0_10px_40px_rgba(15,23,42,0.08)]"
                         : "bg-transparent"
                     }`}
             >
@@ -76,7 +77,7 @@ export default function Navbar() {
                         onClick={() => navigate("/")}
                         className="font-extrabold tracking-tight text-xl text-gray-900"
                     >
-                        Denti<span className="text-teal-600">Care</span>
+                        Shri murari<span className="text-teal-600"> Dental Clinic</span>
                     </button>
 
                     {/* Desktop links */}
@@ -109,7 +110,7 @@ export default function Navbar() {
                     {/* Desktop actions */}
                     <div className="hidden lg:flex items-center gap-3">
                         <a
-                            href="tel:+919999999999"
+                            href="tel:+918859861243"
                             className="inline-flex items-center gap-2 rounded-2xl px-4 py-2 border border-gray-200 bg-white/70 hover:bg-white transition text-sm font-semibold shadow-sm"
                         >
                             <PhoneCall size={16} />
@@ -188,7 +189,7 @@ export default function Navbar() {
 
                                 <div className="mt-2 grid grid-cols-2 gap-3">
                                     <a
-                                        href="tel:+919999999999"
+                                        href="tel:+918859861243"
                                         className="rounded-2xl px-4 py-3 border border-gray-200 bg-white font-semibold text-gray-800 text-center hover:bg-gray-50 transition"
                                     >
                                         Call
